@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ImageController;
    
 Route::get('/', function () {
     return view('welcome');
@@ -20,3 +21,6 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('users', UserController::class);
     Route::resource('products', ProductController::class);
 });
+
+Route::get('image-upload', [ImageController::class, 'index']);
+Route::post('image-upload', [ImageController::class, 'store'])->name('image.store');

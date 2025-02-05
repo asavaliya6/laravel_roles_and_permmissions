@@ -52,15 +52,7 @@ php artisan make:controller RoleController
 
 <h3>Create Seeder For Permissions and AdminUser</h3>
 
-- create a seeder for permissions :
-    => role-list
-    => role-create
-    => role-edit
-    => role-delete
-    => product-list
-    => product-create
-    => product-edit
-    => product-delete
+- create a seeder for permissions : role-list role-create role-edit role-delete product-list product-create product-edit product-delete
 
 - first create a seeder ```php artisan make:seeder PermissionTableSeeder```
 - execute the PermissionTableSeeder seeder ```php artisan db:seed --class=PermissionTableSeeder```
@@ -72,3 +64,12 @@ php artisan make:controller RoleController
 Email: admin@gmail.com
 Password: 123456
 ```
+
+
+## Generate Thumbnail Image using spatie/image Composer package
+
+- The spatie/image Composer package is a PHP library used for image manipulation. It allows users to resize, crop, blur effect, pixelate, greyscale, sepia and apply filters to images easily.
+
+- First install imagemagick extension ```sudo apt install imagemagick```
+- Then restart server ```sudo systemctl restart apache2```
+- Install spatie/image Package : ```composer require spatie/image```
